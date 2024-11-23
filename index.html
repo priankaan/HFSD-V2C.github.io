@@ -22,38 +22,39 @@
     </header>
     <main role="main">
       <article itemscope itemtype="https://schema.org/BlogPosting">
-        <h1 class="entry-title" itemprop="headline" style="text-align: center;font-weight: bold">Universal Low-Resource
-          Speech Synthesis
-          Via Phoneme Fusion
-          Coordinating Low-Rank Decomposition</h1>
+        <h1 class="entry-title" itemprop="headline" style="text-align: center;font-weight: bold">HFSD-V2C: Zero-Shot Visual Voice Cloning Via
+Hierarchical Face-Styled Diffusion Model</h1>
         <section itemprop="entry-text">
           <br>
           <h2 id="authors">Authors</h2>
           <ul>
-            <li>Yanliang Li(Kunming University of Science and Technology)</li>
-            <li>Zhengtao Yu(Kunming University of Science and Technology)</li>
+            <li>Yaping Liu(Kunming University of Science and Technology)</li>
             <li>Linqin Wang(Kunming University of Science and Technology)</li>
             <li>Shengxiang Gao(Kunming University of Science and Technology)</li>
+            <li>Zhengtao Yu(Kunming University of Science and Technology)</li>
             <li>Ling Dong(Kunming University of Science and Technology)</li>
-            <li>Wenjun Wang(Kunming University of Science and Technology)</li>
+            <li>Fei OuYang(Kunming University of Science and Technology)</li>
           </ul>
           <h2 id="abstract">Abstract</h2>
-          <p style="text-align: justify;"> Recent advancements in end-to-end text-to-speech models have made significant
-            progress. However, these
-            approaches based on high-resource languages, are inapplicable for low-resource languages, and existing
-            low-resource speech synthesis methods are typically specific to single languages. Consequently, the pursuit
-            of a universal methodology for low-resource speech synthesis emerges as a critical problem that requires
-            immediate attention. Unlike previous works, we propose a novel and universal approach for multiple
-            low-resource languages by leveraging phoneme fusion coordinating low-rank decomposition in a pre-trained
-            multilingual model. Specifically, by establishing a multilingual phoneme dictionary through phoneme fusion
-            and applying parameter freezing and matrix decomposition techniques for fine-tuning, the proposed method was
-            extensively evaluated across four different languages, each utilizing approximately 3 hours of speech data.
-            The experimental results demonstrate that the quality of the synthesized speech surpasses current mainstream
-            methods for low-resource speech synthesis, achieving outcomes comparable to those trained with tens of hours
-            of data. Audio samples are available at
-            <span style="color: blue;">https://priankaan.github.io/Demo.github.io</span>
+          <p style="text-align: justify;">The goal of this work is zero-shot visual voice
+cloning (ZS-V2C), which aims to generate speech samples with
+unseen speaker identity and prosody derived from a video clip
+and an acoustic reference. ZS-V2C presents greater challenges
+as: 1) unseen speaker modeling; and 2) unseen prosody modeling.
+Unlike previous works, we propose a novel ZS-V2C framework
+that incorporates a hierarchical face-styled diffusion model
+(HFSD-V2C). Specially, first, we leverage cross-modal biometrics
+to predict unseen speaker embeddings based on facial features.
+Then, we jointly model the unseen prosodic features at both
+the speech and video levels. Finally, a probabilistic diffusion
+model is constructed based on the unseen speaker embeddings
+and prosodic features, enabling the generation of expressive and
+diverse speech. Extensive experiments on the LRS2 benchmark
+dataset demonstrate the superior performance of our proposed
+method. Some samples are available at
+            <span style="color: blue;">https://priankaan.github.io/HFSD-V2C.github.io/</span>
           </p>
-          <h2 id="comparison-with-other-models">Audio samples from four languages of Thai,Lao,Vietnamese,Kurdish</h2>
+<!--           <h2 id="comparison-with-other-models">Audio samples from four languages of Thai,Lao,Vietnamese,Kurdish</h2> -->
 
 
           <p style="font-weight: bold;"><em>Thai Audio Samples</em></p>
