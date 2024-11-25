@@ -14,6 +14,23 @@
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
   <title>HFSD-V2C</title>
 </head>
+  <style>
+    /* CSS 样式 */
+    .video-container {
+      display: flex;
+      justify-content: center; /* 水平居中 */
+      align-items: center;    /* 如果需要垂直居中 */
+      margin: 20px 0;         /* 上下间距 */
+    }
+
+    .video-container video {
+      width: 80%;             /* 设置视频宽度为页面的 80% */
+      max-width: 1200px;      /* 最大宽度限制 */
+      height: auto;           /* 自动适配高度，保持宽高比 */
+      border: 2px solid #ccc; /* 可选：为视频添加边框 */
+      border-radius: 8px;     /* 可选：设置圆角效果 */
+    }
+  </style>
 
 <body>
 
@@ -56,7 +73,7 @@ method. Some samples are available at
           </p>
           <h1 class="entry-title" itemprop="headline" style="text-align: center;font-weight: bold">Demos</h1>
           <p style="font-weight: bold;"><em>our method on LRS2 dataset:</em></p>
-          <div>
+          <div  class="video-container">
            <video controls autoplay>
               <source src="1.mp4" type="video/mp4">
             </video>
