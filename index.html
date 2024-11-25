@@ -15,20 +15,35 @@
   <title>HFSD-V2C</title>
 </head>
   <style>
-    /* CSS 样式 */
-    .video-container {
-      display: flex;
-      justify-content: center; /* 水平居中 */
-      align-items: center;    /* 如果需要垂直居中 */
-      margin: 20px 0;         /* 上下间距 */
+   /* 容器样式 */
+    .video-row {
+      display: flex;                /* 使用 Flexbox 布局 */
+      justify-content: space-around; /* 子元素水平间距 */
+      flex-wrap: wrap;              /* 允许换行 */
+      margin: 20px 0;              /* 上下间距 */
     }
 
+    /* 单个视频容器 */
+    .video-container {
+      width: 45%;                   /* 每个视频占行宽的 45% */
+      text-align: center;           /* 文本居中 */
+      margin-bottom: 20px;          /* 每个视频底部的间距 */
+    }
+
+    /* 视频样式 */
     .video-container video {
-      width: 40%;             /* 设置视频宽度为页面的 80% */
-      max-width: 1200px;      /* 最大宽度限制 */
-      height: auto;           /* 自动适配高度，保持宽高比 */
-      border: 2px solid #ccc; /* 可选：为视频添加边框 */
-      border-radius: 8px;     /* 可选：设置圆角效果 */
+      width: 100%;                  /* 视频宽度占满容器 */
+      max-width: 600px;             /* 最大宽度 */
+      height: auto;                 /* 自动调整高度，保持比例 */
+      border: 2px solid #ccc;       /* 可选：添加边框 */
+      border-radius: 8px;           /* 可选：设置圆角 */
+    }
+
+    /* 文本说明样式 */
+    .video-description {
+      font-size: 16px;              /* 字体大小 */
+      color: #333;                  /* 字体颜色 */
+      margin-top: 10px;             /* 与视频的间距 */
     }
   </style>
 
@@ -74,11 +89,26 @@ method. Some samples are available at
           <h1 class="entry-title" itemprop="headline" style="text-align: center;font-weight: bold">Demos</h1>
           <br>
           <p style="font-weight: bold;text-align: center;"><em>LRS2 dataset:</em></p>
-          <div  class="video-container">
-           <video controls autoplay>
-              <source src="1.mp4" type="video/mp4">
-            </video>
-          </div>
+          <!-- 视频行 -->
+  <div class="video-row">
+    <!-- 视频1 -->
+    <div class="video-container">
+      <video controls autoplay>
+        <source src="1.mp4" type="video/mp4">
+        GT
+      </video>
+      <p class="video-description">Description of Video 1</p>
+    </div>
+
+    <!-- 视频2 -->
+    <div class="video-container">
+      <video controls autoplay>
+        <source src="1.mp4" type="video/mp4">
+        HFSD-V2C
+      </video>
+      <p class="video-description">Description of Video 2</p>
+    </div>
+  </div>
           <p style="font-weight: bold;text-align: center;">GT</p>
           <p style="font-weight: bold;"><em>our method on Grid dataset:</em></p>
 
